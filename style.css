@@ -36,7 +36,7 @@ main {
   position: absolute;
   width: 33%;
   z-index: -1;
-  background-image: linear-gradient(to top, #b5179e, #9046cf);
+  background-image: linear-gradient(to bottom, #b5179e, #1818c7);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
