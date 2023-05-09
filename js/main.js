@@ -1,19 +1,21 @@
 const main = document.createElement("main");
 const container = document.createElement("div");
 container.setAttribute("id", "container");
+//background
 const title1 = document.createElement("h1");
 title1.classList.add("title");
 title1.setAttribute("id", "title1");
-title1.innerHTML =
-  "Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter Retro-Counter";
+title1.innerHTML = `${"Retro-Counter ".repeat(16)}`;
 const title2 = title1.cloneNode(true);
 title2.setAttribute("id", "title2");
 const title3 = title1.cloneNode(true);
 title3.setAttribute("id", "title3");
+//counter
 const display = document.createElement("div");
 display.setAttribute("id", "display");
 const buttons = document.createElement("div");
 buttons.setAttribute("id", "buttons");
+//buttons
 const bMinus = document.createElement("button");
 bMinus.classList.add("btn");
 bMinus.setAttribute("id", "bMinus");
@@ -26,18 +28,38 @@ const reset = document.createElement("button");
 reset.classList.add("btn");
 reset.setAttribute("id", "reset");
 reset.innerHTML = "RESET";
+//audio
 const mainAudio = new Audio("src/gameboy-pluck.mp3");
 const resetAudio = new Audio("src/8bit-ringtone.mp3");
-const setCounter = () => (display.innerHTML = counter);
-
+//building the structure
 document.body.append(main);
 main.append(title1, title2, title3);
 main.append(container);
 container.append(display, buttons);
 buttons.append(bMinus, bPlus, reset);
-
+//adding decors
+window.addEventListener("load", () => {
+  mainAudio.load();
+  resetAudio.load();
+  setInterval(() => {
+    title1.style.top = "-2.5rem";
+    title2.style.top = "0";
+    title3.style.top = "-2.5rem";
+  }, 1000);
+  setTimeout(() => {
+    setInterval(() => {
+      title1.style.top = "0";
+      title2.style.top = "-2.5rem";
+      title3.style.top = "0";
+    }, 1000);
+  }, 500);
+});
+//setting the counter
 let counter = 0;
-display.innerHTML = counter;
+function setCounter() {
+  display.innerHTML = counter;
+}
+setCounter();
 
 bMinus.addEventListener("click", () => {
   counter -= 1;
@@ -86,16 +108,3 @@ reset.addEventListener("click", () => {
   }
   resetAudio.play();
 });
-
-setInterval(() => {
-  title1.style.top = "-2.5rem";
-  title2.style.top = "0";
-  title3.style.top = "-2.5rem";
-}, 1000);
-setTimeout(() => {
-  setInterval(() => {
-    title1.style.top = "0";
-    title2.style.top = "-2.5rem";
-    title3.style.top = "0";
-  }, 1000);
-}, 500);
