@@ -119,7 +119,7 @@ main {
   color: blue;
 }
 #symbolMinus {
-  color: red;
+  color: rgb(181, 1, 1);
 }
 
 @media only screen and (min-width: 1250px) {

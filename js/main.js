@@ -19,7 +19,7 @@ function createElement(eTag, eParent, eId, eContent, eClass) {
 }
 const mainAudio = new Audio("src/gameboy-pluck.mp3");
 const resetAudio = new Audio("src/8bit-ringtone.mp3");
-const background = `${"Retro-Counter ".repeat(16)}`;
+const background = `${"Retro-Counter ".repeat(18)}`;
 mainAudio.load();
 resetAudio.load();
 
@@ -39,8 +39,8 @@ createElement("button", buttons, "reset", "RESET", "btn");
 function bubbles() {
   createElement("h1", btnPlus, "symbolPlus", "+");
   setTimeout(() => {
-    symbolPlus.style.fontSize = "3rem";
-    symbolPlus.style.top = "-600%";
+    symbolPlus.style.fontSize = "4rem";
+    symbolPlus.style.top = "-400%";
   }, 100);
   setTimeout(() => {
     symbolPlus.remove();
@@ -49,8 +49,8 @@ function bubbles() {
 function drop() {
   createElement("h1", btnMinus, "symbolMinus", "-");
   setTimeout(() => {
-    symbolMinus.style.top = "3rem";
-    symbolMinus.style.top = "600%";
+    symbolMinus.style.top = "4rem";
+    symbolMinus.style.top = "400%";
   }, 100);
   setTimeout(() => {
     symbolMinus.remove();
