@@ -17,8 +17,8 @@ function createElement(eTag, eParent, eId, eContent, eClass) {
     eParent.append(element);
   }
 }
-const mainAudio = new Audio("src/gameboy-pluck.mp3");
-const resetAudio = new Audio("src/8bit-ringtone.mp3");
+const mainAudio = new Audio("assets/media/gameboy-pluck.mp3");
+const resetAudio = new Audio("assets/media/8bit-ringtone.mp3");
 const background = `${"Retro-Counter ".repeat(18)}`;
 mainAudio.load();
 resetAudio.load();
@@ -40,21 +40,23 @@ function bubbles() {
   createElement("h1", btnPlus, "symbolPlus", "+");
   setTimeout(() => {
     symbolPlus.style.fontSize = "4rem";
-    symbolPlus.style.top = "-400%";
-  }, 100);
+    symbolPlus.style.top = "-200%";
+    symbolPlus.style.color = "transparent";
+  }, 50);
   setTimeout(() => {
     symbolPlus.remove();
-  }, 500);
+  }, 100);
 }
 function drop() {
   createElement("h1", btnMinus, "symbolMinus", "-");
   setTimeout(() => {
     symbolMinus.style.top = "4rem";
-    symbolMinus.style.top = "400%";
-  }, 100);
+    symbolMinus.style.top = "200%";
+    symbolMinus.style.color = "transparent";
+  }, 50);
   setTimeout(() => {
     symbolMinus.remove();
-  }, 500);
+  }, 100);
 }
 
 window.addEventListener("load", () => {
