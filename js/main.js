@@ -31,9 +31,46 @@ createElement("h1", main, "title2", background, "title");
 createElement("h1", main, "title3", background, "title");
 createElement("div", container, "display");
 createElement("div", container, "buttons");
-createElement("button", buttons, "bMinus", "-", "btn");
-createElement("button", buttons, "bPlus", "+", "btn");
+createElement("button", buttons, "btnMinus", "-", "btn");
+createElement("button", buttons, "btnPlus", "+", "btn");
 createElement("button", buttons, "reset", "RESET", "btn");
+
+//decors
+function bubbles() {
+  createElement("h1", btnPlus, "symbolPlus", "+");
+  setTimeout(() => {
+    symbolPlus.style.fontSize = "3rem";
+    symbolPlus.style.top = "-600%";
+  }, 100);
+  setTimeout(() => {
+    symbolPlus.remove();
+  }, 500);
+}
+function drop() {
+  createElement("h1", btnMinus, "symbolMinus", "-");
+  setTimeout(() => {
+    symbolMinus.style.top = "3rem";
+    symbolMinus.style.top = "600%";
+  }, 100);
+  setTimeout(() => {
+    symbolMinus.remove();
+  }, 500);
+}
+
+window.addEventListener("load", () => {
+  setInterval(() => {
+    title1.style.top = "-2.5rem";
+    title2.style.top = "0";
+    title3.style.top = "-2.5rem";
+  }, 1000);
+  setTimeout(() => {
+    setInterval(() => {
+      title1.style.top = "0";
+      title2.style.top = "-2.5rem";
+      title3.style.top = "0";
+    }, 1000);
+  }, 500);
+});
 
 //setting the counter
 let counter = 0;
@@ -41,9 +78,11 @@ function setCounter() {
   display.innerHTML = counter;
 }
 setCounter();
+
 //buttons functions
 function bMinus() {
   counter -= 1;
+  drop();
   if (counter < 0) {
     display.style.color = "red";
   } else if (counter == 0) {
@@ -61,6 +100,7 @@ function bMinus() {
 
 function bPlus() {
   counter += 1;
+  bubbles();
   if (counter > 0) {
     display.style.color = "blue";
   } else if (counter == 0) {
@@ -77,7 +117,6 @@ function bPlus() {
 }
 
 let timer;
-
 function reset() {
   clearTimeout(timer);
   timer = setTimeout(setCounter, 2000);
@@ -100,10 +139,10 @@ buttons.addEventListener("click", (e) => {
     return;
   }
   switch (btn.id) {
-    case "bMinus":
+    case "btnMinus":
       bMinus();
       break;
-    case "bPlus":
+    case "btnPlus":
       bPlus();
       break;
     case "reset":
@@ -112,20 +151,4 @@ buttons.addEventListener("click", (e) => {
     default:
       return;
   }
-});
-
-//adding decors
-window.addEventListener("load", () => {
-  setInterval(() => {
-    title1.style.top = "-2.5rem";
-    title2.style.top = "0";
-    title3.style.top = "-2.5rem";
-  }, 1000);
-  setTimeout(() => {
-    setInterval(() => {
-      title1.style.top = "0";
-      title2.style.top = "-2.5rem";
-      title3.style.top = "0";
-    }, 1000);
-  }, 500);
 });

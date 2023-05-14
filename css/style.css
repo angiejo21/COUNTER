@@ -65,8 +65,9 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2fr 1fr;
 }
-#bMinus,
-#bPlus {
+#btnMinus,
+#btnPlus {
+  position: relative;
   aspect-ratio: 1;
   font-size: 2rem;
   border-bottom: 3px solid rgb(65, 65, 65);
@@ -74,12 +75,12 @@ main {
   border-top: 3px solid rgb(108, 108, 108);
   border-left: 3px solid rgb(108, 108, 108);
 }
-#bMinus:hover,
-#bMinus:active,
-#bMinus:visited:active,
-#bPlus:hover,
-#bPlus:active,
-#bPlus:visited:active {
+#btnMinus:hover,
+#btnMinus:active,
+#btnMinus:visited:active,
+#btnPlus:hover,
+#btnPlus:active,
+#btnPlus:visited:active {
   background-color: rgb(226, 226, 226);
   border-top: 3px solid rgb(65, 65, 65);
   border-left: 3px solid rgb(65, 65, 65);
@@ -104,6 +105,23 @@ main {
   border-bottom: 3px solid rgb(183, 56, 56);
   border-right: 3px solid rgb(183, 56, 56);
 }
+
+#symbolPlus,
+#symbolMinus {
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1000ms ease-out;
+}
+#symbolPlus {
+  color: blue;
+}
+#symbolMinus {
+  color: red;
+}
+
 @media only screen and (min-width: 1250px) {
   body {
     margin: 0 auto;
