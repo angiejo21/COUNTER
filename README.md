@@ -2,77 +2,23 @@
 
 <a name="readme-top"></a>
 
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/angiejo21/COUNTER">
-    <img src="src\favicon\android-chrome-192x192.png" alt="Logo" width="80" height="80">
+    <img src="assets\media\favicon\android-chrome-192x192.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Retro-counter</h3>
 
   <p align="center">
     Vanilla JS counter
-    <br />
-    <a href="https://github.com/angiejo21/COUNTER"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/angiejo21/COUNTER">View Demo</a>
-    ·
-    <a href="https://github.com/angiejo21/COUNTER/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/angiejo21/COUNTER/issues">Request Feature</a>
   </p>
-</div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+</div>
 
 <!-- ABOUT THE PROJECT -->
 
@@ -80,89 +26,42 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://counter.bello.codes)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `angiejo21`, `COUNTER`, `twitter_handle`, `angelabello`, `email_client`, `email`, `project_title`, `project_description`
+Retro-Counter is the final project for [start2impact](https://www.start2impact.it/)'s module "JavaScript Basics" in the Full-stack developer course.
+
+### The assignment:
+
+Develop a JS app that lets the user increment or decrement the counter value. Entering the page, the user should see: 0 set as the counter value, and have two buttons (+ and -) to change said value.
+
+### Requirements:
+
+- The app must be developed with JS, without the help of Jquery or any framework.
+- The buttons, as well as the counter, have to be implemented through JS.
+- Additional features may be added if necessary.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Development
+
+### The idea
+
+The theme I chose is 90's videogames.
+
+I set up the counter as a Gameboy with three buttons "+" "-" and "RESET"; I gave them the iconic bulky look and chose a font that would fit the aesthetic: "Press Start 2P". To create some dynamism, I added a moving background of repeated titles in gradient color.
+
+I included sound and simple animation in each button:
+
+- The display will "load" when starting the counter and during the reset,
+- When pressed, an operator symbol will briefly bubble up or drop.
+
+My main goal was for it to be responsive and user-friendly, meaning, even during stressing, the animations and sounds would end and reload without crashing.
+
+The whole HTML structure is implemented through a JS function and the eventListener is placed on the buttons wrapper in order to use the Event Delegation.
 
 ### Built With
 
-- Vanilla JS
+- JavaScript
 - CSS
 - HTML
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/angiejo21/COUNTER.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
-
-See the [open issues](https://github.com/angiejo21/COUNTER/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -178,51 +77,17 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Angela Bellò - [Portfolio](https://bello.codes)
 
 Project Link: [https://github.com/angiejo21/COUNTER](https://github.com/angiejo21/COUNTER)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/angiejo21/COUNTER.svg?style=for-the-badge
-[contributors-url]: https://github.com/angiejo21/COUNTER/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/angiejo21/COUNTER.svg?style=for-the-badge
-[forks-url]: https://github.com/angiejo21/COUNTER/network/members
-[stars-shield]: https://img.shields.io/github/stars/angiejo21/COUNTER.svg?style=for-the-badge
-[stars-url]: https://github.com/angiejo21/COUNTER/stargazers
-[issues-shield]: https://img.shields.io/github/issues/angiejo21/COUNTER.svg?style=for-the-badge
-[issues-url]: https://github.com/angiejo21/COUNTER/issues
 [license-shield]: https://img.shields.io/github/license/angiejo21/COUNTER.svg?style=for-the-badge
 [license-url]: https://github.com/angiejo21/COUNTER/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/angelabello/
-[product-screenshot]: src\screenshot.gif
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
+[product-screenshot]: assets\img\screenshot.gif
