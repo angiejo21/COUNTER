@@ -74,7 +74,6 @@ function setDisplay() {
 }
 //Background Animation
 window.addEventListener("load", () => {
-  setDisplay();
   setTimeout(() => {
     setCounter();
   }, 1500);
