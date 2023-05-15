@@ -24,7 +24,6 @@ const background = `${"Retro-Counter ".repeat(18)}`;
 introAudio.load();
 mainAudio.load();
 resetAudio.load();
-introAudio.play();
 //STRUCTURE BUILT
 //(eTag, eParent, eId, eContent, eClass)
 createElement("main", "body");
@@ -66,16 +65,19 @@ function drop() {
 function setDisplay() {
   const dashes = ["-", "-"];
   let loading = dashes[0];
+  display.style.color = "";
   display.innerHTML = loading;
   setTimeout(() => {
     loading = dashes[0] + dashes[1];
     display.innerHTML = loading;
-  }, 500);
+  }, 750);
 }
 //Background Animation
 window.addEventListener("load", () => {
-  setTimeout(setCounter, 1500);
   setDisplay();
+  setTimeout(() => {
+    setCounter();
+  }, 1500);
   setInterval(() => {
     title1.style.top = "-2.5rem";
     title2.style.top = "0";
@@ -89,10 +91,58 @@ window.addEventListener("load", () => {
     }, 1000);
   }, 500);
 });
+//Easter egg
+function greeting() {
+  const greetings = [
+    "WELCOME!",
+    "HELLO!",
+    "HI!",
+    "G'DAY!",
+    "CIAO!",
+    "OLA!",
+    "HOLA!",
+    "SALUT!",
+    "HALLO!",
+    "HEJ!",
+    "ALO!",
+    "HEI!",
+    "ZDRAVO!",
+    "NAZDAR!",
+    "SVEIKI!",
+    "TUNGJATJETA!",
+    "HUJAMBO!",
+    "AHOJ!",
+    "CZESC!",
+    "HALLA!",
+    "MERHABA!",
+    "HALO!",
+    "KONNICHIWA!",
+    "KUMUSTA!",
+    "MARHABAAN!",
+    "MINGALABA!",
+    "NAMASKARA!",
+    "NAMASTE!",
+    "NIN HAO!",
+    "PRIVET!",
+    "PRYVIT!",
+    "SHALOM!",
+    "SWASDI!",
+    "SZIA!",
+    "TALOFA!",
+    "XIN CHAO!",
+    "GEIA!",
+  ];
+  introAudio.play();
+  display.style.color = "";
+  display.style.fontSize = "1rem";
+  display.innerHTML =
+    greetings[Math.floor(Math.random() * (greetings.length - 1))];
+}
 //COUNTER
 //Setting the counter
 let counter = 0;
 function setCounter() {
+  display.style.fontSize = "4rem";
   display.innerHTML = counter;
 }
 setCounter();
@@ -149,8 +199,22 @@ function reset() {
   }
   resetAudio.play();
 }
+
 //EVENT LISTENER
-buttons.addEventListener("click", (e) => {
+container.addEventListener("click", (e) => {
+  if (e.target.id == "display") {
+    greeting();
+    setTimeout(() => {
+      setCounter();
+      if (counter === 0) {
+        return;
+      } else if (counter > 0) {
+        display.style.color = "blue";
+      } else {
+        display.style.color = "red";
+      }
+    }, 1500);
+  }
   const btn = e.target.closest("button");
   if (!btn) {
     return;
