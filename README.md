@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/angiejo21/COUNTER">
-    <img src="assets\media\favicon\android-chrome-192x192.png" alt="Logo" width="80" height="80">
+    <img src="assets\img\favicon\android-chrome-192x192.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Retro-counter</h3>
@@ -30,7 +30,7 @@ Retro-Counter is the final project for [start2impact](https://www.start2impact.i
 
 ### The assignment:
 
-Develop a JS app that lets the user increment or decrement the counter value. Entering the page, the user should see: 0 set as the counter value, and have two buttons (+ and -) to change said value.
+Develop a JS app that lets the user increment or decrement the counter value. Entering the page, the user should see: 0 set as the counter value, and two buttons (+ and -) to change said value.
 
 ### Requirements:
 
@@ -46,14 +46,14 @@ Develop a JS app that lets the user increment or decrement the counter value. En
 
 The theme I chose is 90's videogames.
 
-I set up the counter as a Gameboy with three buttons "+" "-" and "RESET"; I gave them the iconic bulky look and chose a font that would fit the aesthetic: "Press Start 2P". To create some dynamism, I added a moving background of repeated titles in gradient color.
+I set up the counter as a Gameboy with three buttons <strong>_+_ _-_</strong> and <strong>_RESET_</strong>; I gave them the iconic bulky look and chose a font that would fit the aesthetic: _Press Start 2P_. To create some dynamism, I added a moving background of repeated titles in gradient color.
 
 I included sound and simple animation in each button:
 
 - The display will "load" when starting the counter and during the reset,
 - When pressed, an operator symbol will briefly bubble up or drop.
 
-My main goal was for it to be responsive and user-friendly, meaning, even during stressing, the animations and sounds would end and reload without crashing.
+My <strong>main goal</strong> was for it to be <strong>responsive</strong> and <strong>user-friendly</strong>, meaning, even during stressing, the animations and sounds would end and reload without crashing.
 
 The whole HTML structure is implemented through a JS function and the eventListener is placed on the buttons wrapper in order to use the Event Delegation.
 
