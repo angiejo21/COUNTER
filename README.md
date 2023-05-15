@@ -20,6 +20,28 @@
 
 </div>
 
+<details>
+  <summary>Index</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#the-assignment">The assignment</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#development">Development</a>
+      <ul>
+        <li><a href="#the-idea">The idea</a></li>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
@@ -90,4 +112,4 @@ Project Link: [https://github.com/angiejo21/COUNTER](https://github.com/angiejo2
 [license-url]: https://github.com/angiejo21/COUNTER/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/angelabello/
-[product-screenshot]: assets\img\screenshot.gif
+[product-screenshot]: /assets/img/screenshot.gif
