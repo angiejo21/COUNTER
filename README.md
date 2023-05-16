@@ -72,7 +72,7 @@ I set up the counter as a Gameboy with three buttons <strong>_+_ _-_</strong> an
 
 I included sound and simple animation in each button:
 
-- The display will "load" when starting the counter and during the reset,
+- The display will "load" during the reset,
 - When pressed, an operator symbol will briefly bubble up or drop.
 
 My <strong>main goal</strong> was for it to be <strong>responsive</strong> and <strong>user-friendly</strong>, meaning, even during stressing, the animations and sounds would end and reload without crashing.
